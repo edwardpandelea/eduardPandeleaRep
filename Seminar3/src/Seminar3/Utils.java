@@ -1,8 +1,5 @@
 package Seminar3;
 
-import org.w3c.dom.*;
-import org.xml.sax.SAXException;
-
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
