@@ -1,20 +1,34 @@
 package Seminar3;
 
-public class Angajat extends Aplicant {
-    private final String ocupatie;
-    private final int salariu;
+import java.util.Arrays;
 
-    public Angajat(String nume, String prenume, Integer varsta, Integer punctaj, Integer nrProiecte, String[] denumireProiecte, Integer salariu, String ocupatie) {
-        super(nume, prenume, varsta, punctaj, nrProiecte, denumireProiecte);
-        this.salariu = salariu;
+public class Angajat extends Aplicant {
+    private String ocupatie;
+    private int salariu;
+
+    public Angajat() {
+        super();
+
+    }
+
+    public void setOcupatie(String ocupatie) {
         this.ocupatie = ocupatie;
     }
+
+    public void setSalariu(Integer salariu) {
+        this.salariu = salariu;
+    }
+
+
     @Override
     public String toString() {
-        final StringBuilder stringBuilder = new StringBuilder("Angajat");
-        stringBuilder.append(super.toString());
-        stringBuilder.append("Ocupatie=").append(ocupatie);
-        stringBuilder.append(", salariu=").append(salariu);
-        return stringBuilder.toString();
+        final StringBuilder sb = new StringBuilder("{Angajat: ");
+        sb.append(super.toString());
+        sb.append("Ocupatie=").append(ocupatie);
+        sb.append(", salariu=").append(salariu);
+        return sb.toString();
     }
+
+
+
 }

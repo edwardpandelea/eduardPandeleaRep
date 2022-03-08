@@ -1,31 +1,27 @@
 package Seminar3;
 
-import java.util.Arrays;
-
 public class Elev extends Aplicant {
     private int clasa;
     private String tutore;
 
-    public Elev(String nume, String prenume, Integer varsta, Integer punctaj,
-                Integer nr_proiecte, String[] denumireProiect, Integer clasa, String tutore) {
-        super(nume, prenume, varsta, punctaj, nr_proiecte, denumireProiect);
-        this.clasa = clasa;
+    public Elev() {
+        super();
+    }
+
+    public void setClasa(Integer i) {
+        this.clasa = i;
+    }
+
+    public void setTutore(String tutore) {
         this.tutore = tutore;
     }
 
-
     @Override
     public String toString() {
-        return "Elev: Nume=" + nume + ", Prenume=" + prenume + ", Varsta="
-                + varsta + ", Punctaj=" + punctaj + ", Nr_proiecte=" + nrProiecte + ", DenumireProiect="
-                + Arrays.toString(denumireProiect) + "Clasa=" + clasa + ", Tutore=" + tutore;
+        final StringBuilder sb = new StringBuilder("{Angajat: ");
+        sb.append(super.toString());
+        sb.append("Clasa=").append(clasa);
+        sb.append(", tutore=").append(tutore);
+        return sb.toString();
     }
-
-
-    public int finantare() {
-        Integer s = 30;
-        System.out.println("Angajatul " + getNume() + " " + getPrenume() + " primeste" + s + " Euro/zi in proiect.");
-        return s;
-    }
-
 }
